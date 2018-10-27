@@ -11,10 +11,10 @@
 void move(int n, char* orig,char* temp,char* dest)
 {
 	if (n==1) 
-		printf("mova o disco 1 da haste %s para a haste %s\n",orig, dest);
+		printf("Mova o disco 1 da haste \33[0;31m %s \33[0m para a haste \33[0;32m %s \33[0m \n",orig, dest);
 	else{
 		move(n-1,orig,dest,temp);
-		printf("Mova o disco %d da haste %s para a haste %s\n", n, orig, dest);
+		printf("Mova o disco %d da haste \33[0;31m %s \33[0m para a haste \33[0;32m  %s \33[0m \n", n, orig, dest);
 		move(n-1,temp,orig,dest);
 	}
 }
